@@ -1,0 +1,93 @@
+/* src/components/Calculators/ScientificCalculator.css */
+.scientific-calculator {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 5%;
+    background: linear-gradient(135deg, #f0f2f5, #a1c4fd);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.scientific-calculator h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+.display {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.expression {
+    font-size: 1.2rem;
+    color: #333;
+}
+  
+.result {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+  
+.scientific-keypad {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+  
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+button.clear, button.delete {
+    background-color: #dc3545;
+}
+button.clear, button.delete:hover {
+    background-color: #c82333;
+}
+  
+button.operator {
+    background-color: #28a745;
+}  
+button.operator:hover {
+    background-color: #218838;
+}
+  
+button.function {
+    background-color: #28a745;
+} 
+button.function:hover {
+    background-color: #218838;
+}
+
+button.equal {
+    background-color: #ffc107;
+    grid-column: span 2;
+}
+button.equal:hover {
+    background-color: #e0a800;
+}
+  
+button.number, button.decimal, button.parenthesis {
+    background-color: #007bff;
+}
+button.number:hover, button.decimal:hover, button.parenthesis:hover {
+    background-color: #0056b3;
+}
+  

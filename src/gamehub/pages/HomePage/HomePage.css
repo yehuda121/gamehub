@@ -1,0 +1,30 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media-container {
+  margin-top: 10rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media-link img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-media-link:hover img {
+  transform: scale(1.1);
+}

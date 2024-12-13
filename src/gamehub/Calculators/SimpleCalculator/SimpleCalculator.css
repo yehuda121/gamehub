@@ -1,0 +1,111 @@
+/* src/gamehub/Calculators/SimpleCalculator.css */
+.simple-calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f2f5, #a1c4fd);
+  font-family: 'Roboto', sans-serif;
+}
+  
+.simple-calculator h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+  
+.simple-calculator input {
+  width: 300px;
+  padding: 15px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: right;
+  background: #d3f3c9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.simple-keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.simple-keypad button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.simple-keypad button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.simple-keypad button:active {
+  background: #004494;
+  transform: translateY(0);
+}
+
+/* + operatoe */
+.simple-keypad button:nth-child(4) {
+  background: #28a745;
+}
+.simple-keypad button:nth-child(4):hover {
+  background: #218838;
+}
+.simple-keypad button:nth-child(4):active {
+  background: #1e7e34;
+}
+
+/* - operatoe */
+.simple-keypad button:nth-child(8) {
+  background: #28a745;
+}
+.simple-keypad button:nth-child(8):hover {
+  background: #218838;
+}
+.simple-keypad button:nth-child(8):active {
+  background: #1e7e34;
+}
+
+/* * operatoe */
+.simple-keypad button:nth-child(12) {
+  background: #28a745;
+}
+.simple-keypad button:nth-child(12):hover {
+  background: #218838;
+}
+.simple-keypad button:nth-child(12):active {
+  background: #1e7e34;
+}
+
+/* / operatoe */
+.simple-keypad button:nth-child(16) {
+  background: #28a745;
+}
+.simple-keypad button:nth-child(16):hover {
+  background: #218838;
+}
+.simple-keypad button:nth-child(16):active {
+  background: #1e7e34;
+}
+
+.simple-keypad button:nth-child(13) {
+  background: #dc3545;
+}
+
+.simple-keypad button:nth-child(13):hover {
+  background: #c82333;
+}
+
+.simple-keypad button:nth-child(13):active {
+  background: #bd2130;
+}

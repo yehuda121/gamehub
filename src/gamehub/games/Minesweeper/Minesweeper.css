@@ -1,0 +1,175 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Minesweeper background */
+.minesweeper-background {
+    background-image: url('C:/Users/yehud/Desktop/All_Projects/gamehub/public/backgroung-games.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100vw;  
+}
+
+.minesweeper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 20px;
+    background-color: rgba(29, 110, 198, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: 90%;
+    overflow: auto; 
+}
+
+.minesweeper label {
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.minesweeper select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+  
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    background-color: #7f8c8d;
+    color: #ecf0f1;
+    border-radius: 5px;
+}
+  
+.cell.open {
+    background-color: #bdc3c7;
+    cursor: default;
+}
+  
+.cell.flag {
+    background-image: url('C:/Users/yehud/Desktop/All_Projects/gamehub/public/israel-flag-png.png');
+    background-size: cover;
+}
+
+
+.cell.open.mine {
+    background-color: #e74c3c;
+    color: #000;
+}
+
+.cell img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+/* Add hover effect for cells */
+.cell:not(.open):hover {
+    background-color: #95a5a6;
+}
+
+/* Custom styles for the mine image */
+#mineCss {
+    width: 90%;
+    height: 90%;
+}
+
+.cell.open:not(.mine) {
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Styles for the Start Over button */
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.minesweeper.easy {
+    margin-top: 20px;
+}
+
+.minesweeper.hard {
+    margin-top: 60px;
+}
+
+.minesweeper.very-hard {
+    margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .minesweeper {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .minesweeper label {
+        font-size: 16px;
+    }
+
+    .minesweeper select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .minesweeper.easy {
+        margin-top: 0px;
+    }
+    
+    .minesweeper.hard {
+        margin-top: 0px;
+    }
+    
+    .minesweeper.very-hard {
+        margin-top: 0px;
+    }
+}

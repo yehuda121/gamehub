@@ -1,0 +1,39 @@
+/* Button.css */
+.gamehab-button {
+    background-color: #6200ea; /*  background color */
+    border: none; /* Remove border */
+    color: #c3cfe2; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get the element to fit around the content */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 4px; /* Rounded corners */
+    transition-duration: 0.4s; /* 0.4 seconds transition effect to hover state */
+}
+
+.gamehab-button:hover {
+    background-color: #c3cfe2; /* White background on hover */
+    color: #6200ea; /* Black text on hover */
+    border: 2px solid #6200ea; /* Green border on hover */
+}
+
+/* Styles for the login button inside the login page*/
+.login-button-insideLoginPage {
+    padding: 10px 195px; /* Increase padding */
+    font-size: 18px; /* Increase font size */
+}
+
+.clicker-game-buttons{
+    color: white;
+}
+.clicker-game-buttons:hover{
+    color: #6200ea;
+    background-color: white;
+}
+.clicker-game-buttons:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

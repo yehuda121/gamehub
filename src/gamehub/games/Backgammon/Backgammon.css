@@ -1,0 +1,159 @@
+.app {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .board {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0a96d;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+  }
+  
+  .upper-board, .lower-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .quarter {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .stack {
+    position: relative;
+    width: 40px;
+    height: 180px;
+    border: 1px solid #000;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #d7a577;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .stack.white {
+    background-color: #f0f0f0;
+  }
+  
+  .stack.black {
+    background-color: #333;
+  }
+  
+  .pieces {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  
+  .piece {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+  
+  .piece.white {
+    /* background-image: url('C:/Users/yehud/Desktop/All_Projects/gamehub/public/redBall.png'); */
+    background-image: url('../../../../public/redBall.png');
+  }
+  
+  .piece.black {
+    /* background-image: url('C:/Users/yehud/Desktop/All_Projects/gamehub/public/blackBall.png'); */
+    background-image: url('../../../../public/blackBall.png');
+  }
+  
+  .bar {
+    width: 20px;
+    background-color: #d7a577;
+    border: 1px solid #000;
+    margin: 0 10px;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  .bear-off {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bear-off-cell {
+    width: 40px;
+    height: 180px;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+  }
+  
+  .bear-off-cell.black {
+    background-color: #333;
+  }
+  
+  .bear-off-cell.white {
+    background-color: #f0f0f0;
+  }
+  
+  .dice-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .dice-container {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  
+  .die {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .die.selected {
+    background-color: red;
+  }
+  
+  .turn {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .dice-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
