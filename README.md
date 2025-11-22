@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Yehuda Shmulevitz – Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the source code for my personal portfolio website. The project was originally based on a small React playground and has been fully redesigned and refactored into a professional portfolio intended for presenting my work as a Software Engineer.
 
-## Available Scripts
+The website provides a structured, clear, and polished presentation of my background, selected projects, and technical capabilities. It is designed to support recruiters and engineering teams in evaluating my experience across software development, cloud technologies, AI-based features, and systems engineering.
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+The portfolio includes a modern hero section with a professional summary, direct access to my CV, and links to external profiles. A curated list of featured projects highlights my work in full-stack development, backend logic, cloud-native architectures, machine learning, and systems programming. The design emphasizes usability, readability, and high-quality engineering presentation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Multilingual support is built in using i18next, including full handling of both LTR and RTL layouts. The site is deployed on Firebase Hosting and optimized for fast loading and consistent behavior across devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+The codebase follows a clean project structure with clear separation of pages, components, styling, assets, and translation files. The design and implementation aim to maintain readability, scalability, and ease of extension.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Small tools and mini-apps from the original project are included as a separate section. These serve as an optional technical playground and may be expanded over time.
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React
+React Router
+i18next / react-i18next
+Custom CSS
+Firebase Hosting
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The portfolio is deployed on Firebase Hosting and updated regularly through Git.
 
-### `npm run eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Email: [yehudash1994@gmail.com](mailto:yehudash1994@gmail.com)
+LinkedIn: [https://www.linkedin.com/in/yehuda-shmulevitz](https://www.linkedin.com/in/yehuda-shmulevitz)
+GitHub: [https://github.com/yehuda121](https://github.com/yehuda121)
