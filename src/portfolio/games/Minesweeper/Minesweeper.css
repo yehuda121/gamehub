@@ -7,7 +7,8 @@ html, body {
 
 /* Minesweeper background */
 .minesweeper-background {
-    background-image: url('C:/Users/yehud/Desktop/All_Projects/gamehub/public/backgroung-games.avif');
+    /* background-image: url("/background-games.avif"); */
+    background-image: url("../../../../public/background-games.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,7 +74,8 @@ html, body {
 }
   
 .cell.flag {
-    background-image: url('C:/Users/yehud/Desktop/All_Projects/gamehub/public/israel-flag-png.png');
+    /* background-image: url("./israel-flag-png.png"); */
+    background-image: url("../../../../public/israel-flag-png.png");
     background-size: cover;
 }
 

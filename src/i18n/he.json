@@ -1,0 +1,68 @@
+{
+    "homepage": {
+        "tag": "פורטפוליו רשמי",
+        "name": "יהודה שמולביץ",
+        "role": "מהנדס תוכנה · מומחה ב-AI · מפתח פולסטאק",
+        "summary": "בוגר B.Sc. בהנדסת תוכנה עם ניסיון מעשי בפיתוח פולסטאק, ארכיטקטורות ענן ופתרונות מבוססי AI. בניתי מערכות ברמת Production על גבי AWS, פלטפורמות ווב בזמן אמת ופרויקטים מורכבים ב-Unity, למידת מכונה, ++C, Python ו-Linux. מחפש את ההזדמנות הבאה שלי בתחום פיתוח התוכנה.",
+        "cvButton": "צפה בקורות חיים (PDF)",
+        "contactButton": "צור קשר",
+        "linkedinButton": "פרופיל LinkedIn",
+
+        "projectsTitle": "פרויקטים נבחרים",
+        "projectsSubtitle": "אוסף פרויקטים המייצגים את עבודתי בפיתוח פולסטאק, ענן, AI, תכנות מערכות ופיתוח משחקים.",
+
+        "projectMesayaTitle": "Mesayaatech – פלטפורמת תמיכה למילואימניקים",
+        "projectMesayaDesc": "פלטפורמת פולסטאק המסייעת למילואימניקים להתחבר למנטורים, לגלות משרות ולהתקדם בתהליך תעסוקתי. המערכת כוללת תפקידי משתמש שונים, אימות מאובטח וממשק דו-לשוני.",
+        "projectMesayaTech": "סטאק טכנולוגי: Node.js, Next.js, AWS (Cognito, DynamoDB, S3, SES, Bedrock), Docker",
+        "projectMesayaLink": "צפה במצגת",
+
+        "projectHeartTitle": "Heart Attack Prediction (למידת מכונה)",
+        "projectHeartDesc": "מערכת למידת מכונה לחיזוי סיכון להתקף לב על בסיס נתונים קליניים, כולל עיבוד מקדים, נרמול תכונות, אימון ומדדי ביצועים.",
+        "projectHeartTech": "סטאק טכנולוגי: Python, Scikit-learn, Pandas, NumPy, Matplotlib",
+        "projectHeartLink": "לצפייה ב-GitHub",
+
+        "projectWarehouseTitle": "מערכת השאלת ציוד מחסן",
+        "projectWarehouseDesc": "יישום ווב לניהול השאלת ציוד עם עדכונים בזמן אמת ופרונט מודרני. זוכה מקום ראשון במכללת עזריאלי.",
+        "projectWarehouseTech": "סטאק טכנולוגי: React, Node.js, Firebase (Firestore)",
+        "projectWarehouseLink": "צפה בדמו",
+
+        "projectWizardTitle": "Wizard Arena 3D",
+        "projectWizardDesc": "משחק ארנה בתצורת צד שלישי עם AI לאויבים, מערכת חיים, רמות קושי ואופטימיזציה באמצעות Object Pooling. התמקדתי בארכיטקטורה ובתכנון משחק.",
+        "projectWizardTech": "סטאק טכנולוגי: Unity (C#), פיזיקה, Object Pooling, AI",
+        "projectWizardLink": "צפה בסרטון",
+
+        "projectDiskTitle": "Disk Simulator",
+        "projectDiskDesc": "סימולטור מערכת קבצים המדמה פעולות על דיסק וירטואלי, כולל תכנות מערכות, טיפול בקבצים וקריאות מערכת.",
+        "projectDiskTech": "סטאק טכנולוגי: ++C, ניהול קבצים, קריאות מערכת",
+        "projectDiskLink": "לצפייה ב-GitHub",
+
+        "projectExtTitle": "תוסף כרום – סינון תוצאות חיפוש",
+        "projectExtDesc": "תוסף כרום המוסיף רכיבי UI לתוצאות חיפוש בגוגל ומאפשר הסתרה/סינון של תוצאות באמצעות מניפולציות DOM וגילוי דינמי של צמתים.",
+        "projectExtTech": "סטאק טכנולוגי: JavaScript, DOM APIs, Manifest V3",
+        "projectExtLink": "לצפייה ב-GitHub",
+
+        "projectsShowMore": "הצג עוד פרויקטים ▼",
+        "projectsShowLess": "הצג פחות פרויקטים ▲",
+
+        "toolsTitle": "כלים ואפליקציות קטנות",
+        "toolsText": "מעבר לפרויקטים המרכזיים, אני בונה כלים ומשחקים קטנים כדי להתנסות ברעיונות חדשים, ארכיטקטורות ודפוסי UI.",
+        "toolsGames": "מגרש משחקים – Games",
+        "toolsCalculators": "מחשבון – Calculators",
+        "toolsNote": "המיני-אפליקציות אינן מערכות Production, אך הן מייצגות סקרנות, ניסוי מהיר ולמידה מתמשכת.",
+
+        "contactTitle": "יצירת קשר",
+        "contactText": "מוכן למשרות בתחום הפולסטאק ופיתוח תוכנה, וכן לתפקידים המשלבים ענן, AI וארכיטקטורות סקיילביליות.",
+        "contactEmailLabel": "אימייל:",
+        "contactPhoneLabel": "טלפון:",
+        "contactLinkedinLabel": "לינקדאין:",
+        "contactGithubLabel": "גיטאב:"
+    },
+    "navbar": {
+    "projects": "פרויקטים",
+    "tools": "כלים",
+    "games": "משחקים",
+    "calculators": "מחשבונים",
+    "contact": "יצירת קשר"
+    }
+
+}

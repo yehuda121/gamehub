@@ -1,0 +1,68 @@
+{
+    "homepage": {
+        "tag": "Official Portfolio",
+        "name": "Yehuda Shmulevitz",
+        "role": "Software Engineer · AI Specialist · Full-Stack Developer",
+        "summary": "B.Sc. in Software Engineering with hands-on experience in full-stack development, cloud architectures, and AI-based features. I have built production-grade systems on AWS, real-time web platforms, and complex side projects in Unity, ML, C++, Python, and Linux. I am looking for my next opportunity in Software Development.",
+        "cvButton": "View CV (PDF)",
+        "contactButton": "Contact",
+        "linkedinButton": "LinkedIn Profile",
+
+        "projectsTitle": "Featured Projects",
+        "projectsSubtitle": "Selected projects that represent my work in full-stack development, cloud, AI, systems programming and game development.",
+
+        "projectMesayaTitle": "Mesayaatech – Reservist Career Support Platform",
+        "projectMesayaDesc": "A full-stack platform that helps Israeli reservists connect with mentors, discover job opportunities and track their progress. The system supports multiple user roles, secure authentication and a bilingual UI.",
+        "projectMesayaTech": "Tech Stack: Node.js, Next.js, AWS (Cognito, DynamoDB, S3, SES, Bedrock), Docker",
+        "projectMesayaLink": "View Presentation",
+
+        "projectHeartTitle": "Heart Attack Prediction (Machine Learning)",
+        "projectHeartDesc": "Machine-learning pipeline that predicts heart-attack risk based on clinical features. Includes preprocessing, feature scaling, training and performance evaluation.",
+        "projectHeartTech": "Tech Stack: Python, Scikit-learn, Pandas, NumPy, Matplotlib",
+        "projectHeartLink": "View on GitHub",
+
+        "projectWarehouseTitle": "Warehouse Equipment Lending System",
+        "projectWarehouseDesc": "Web application for managing equipment lending in a warehouse, with real-time data updates and a modern frontend. This project won 1st place at Azrieli College.",
+        "projectWarehouseTech": "Tech Stack: React, Node.js, Firebase (Firestore)",
+        "projectWarehouseLink": "View Demo",
+
+        "projectWizardTitle": "Wizard Arena 3D",
+        "projectWizardDesc": "Third-person arena game with enemy AI, health system, difficulty levels and performance optimization via object pooling. Focused on gameplay design and systems thinking.",
+        "projectWizardTech": "Tech Stack: Unity (C#), Physics, Object Pooling, AI",
+        "projectWizardLink": "Watch Video",
+
+        "projectDiskTitle": "Disk Simulator",
+        "projectDiskDesc": "File system simulation that emulates file operations on a virtual disk, showcasing low-level programming, file handling and system calls.",
+        "projectDiskTech": "Tech Stack: C++, File Handling, System Calls",
+        "projectDiskLink": "View on GitHub",
+
+        "projectExtTitle": "Chrome Extension – Search Results Hider",
+        "projectExtDesc": "Chrome extension that injects UI controls into Google Search results, enabling users to hide or filter specific results using safe DOM manipulation and dynamic node detection.",
+        "projectExtTech": "Tech Stack: JavaScript, DOM APIs, Manifest V3",
+        "projectExtLink": "View on GitHub",
+
+        "projectsShowMore": "Show more projects ▼",
+        "projectsShowLess": "Show fewer projects ▲",
+
+        "toolsTitle": "Tools & Mini Apps",
+        "toolsText": "Beyond my main projects, I build small tools and games to experiment with new ideas, architectures and UI patterns. These are presented as a playground and technical sandbox.",
+        "toolsGames": "Games Playground",
+        "toolsCalculators": "Calculators",
+        "toolsNote": "Mini apps are not production systems, but they reflect curiosity, quick experimentation and continuous learning.",
+
+        "contactTitle": "Contact",
+        "contactText": "I am open to Full-Stack and Software Development roles, as well as positions that combine cloud, AI and scalable web architectures.",
+        "contactEmailLabel": "Email:",
+        "contactPhoneLabel": "Phone:",
+        "contactLinkedinLabel": "LinkedIn:",
+        "contactGithubLabel": "GitHub:"
+    },
+        "navbar": {
+        "projects": "Projects",
+        "tools": "Tools",
+        "games": "Games",
+        "calculators": "Calculators",
+        "contact": "Contact"
+    }
+
+}

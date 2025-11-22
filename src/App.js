@@ -1,17 +1,18 @@
 import React from 'react';
 import { BrowserRouter as BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './gamehub/pages/HomePage/HomePage';
-import GamesHome from './gamehub/games/GamesHomePage/GamesHome';
-import Login from './gamehub/pages/Login/Login';
-import Minesweeper from './gamehub/games/Minesweeper/Minesweeper';
-import Backgammon from './gamehub/games/Backgammon/Backgammon';
-import Snake from './gamehub/games/Snake/Snake';
-// import GraphicCalculator from './gamehub/Calculators/GraphicCalculator';
-import CalculatorsHome from './gamehub/Calculators/CalculatorHomePage/CalculatorsHome';
-import ScientificCalculator from './gamehub/Calculators/ScientificCalculator/ScientificCalculator';
-import SimpleCalculator from './gamehub/Calculators/SimpleCalculator/SimpleCalculator';
-import Navbar from './gamehub/components/navbar/navbar';
-import ClickerGame from './gamehub/games/ClickerGame/ClickerGame';
+import HomePage from './portfolio/pages/HomePage/HomePage';
+import GamesHome from './portfolio/games/GamesHomePage/GamesHome';
+import Login from './portfolio/pages/Login/Login';
+import Minesweeper from './portfolio/games/Minesweeper/Minesweeper';
+import Backgammon from './portfolio/games/Backgammon/Backgammon';
+import Snake from './portfolio/games/Snake/Snake';
+// import GraphicCalculator from './portfolio/Calculators/GraphicCalculator';
+import CalculatorsHome from './portfolio/Calculators/CalculatorHomePage/CalculatorsHome';
+import ScientificCalculator from './portfolio/Calculators/ScientificCalculator/ScientificCalculator';
+import SimpleCalculator from './portfolio/Calculators/SimpleCalculator/SimpleCalculator';
+// import Navbar from './portfolio/components/Navbar/Navbar';
+import Navbar from './portfolio/components/Navbar/Navbar';
+import ClickerGame from './portfolio/games/ClickerGame/ClickerGame';
 
 function App() {
   return (
