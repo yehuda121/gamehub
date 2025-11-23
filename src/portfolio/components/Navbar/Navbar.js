@@ -49,6 +49,9 @@ function Navbar() {
         </Link>
 
         <div className="navbar-right">
+
+          {/* --------------------------------------------------- */}
+
           <div
             className="navbar-dropdown"
           >
@@ -86,6 +89,8 @@ function Navbar() {
               </div>
             )}
           </div>
+
+          {/* -------------------------------------------------------------- */}
 
           <nav className="navbar-links">
             <button

@@ -202,7 +202,7 @@ function Homepage() {
         </div>
 
         {/* Tools & Mini Apps */}
-        <div className="homepage-card">
+        {/* <div className="homepage-card">
           <h2 className="homepage-card-title">{t('homepage.toolsTitle')}</h2>
           <p className="homepage-card-text">
             {t('homepage.toolsText')}
@@ -226,7 +226,7 @@ function Homepage() {
           <p className="homepage-card-note">
             {t('homepage.toolsNote')}
           </p>
-        </div>
+        </div> */}
 
         {/* Contact */}
         <div className="homepage-card" id="contact-section">

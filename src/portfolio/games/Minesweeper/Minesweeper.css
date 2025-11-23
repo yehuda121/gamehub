@@ -1,177 +1,144 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+.ms-page {
+  padding: 4rem 1rem;
+  min-height: calc(100vh - 70px);
+  background: radial-gradient(circle at top, #0b1120, #020617 45%);
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Minesweeper background */
-.minesweeper-background {
-    /* background-image: url("/background-games.avif"); */
-    background-image: url("../../../../public/background-games.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; 
-    width: 100vw;  
+.ms-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.minesweeper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    border: 2px solid #000;
-    padding: 20px;
-    background-color: rgba(29, 110, 198, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-height: 90%;
-    overflow: auto; 
+.ms-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #f8fafc;
 }
 
-.minesweeper label {
-    font-size: 18px;
-    margin-right: 10px;
-    font-weight: bold;
+.ms-panel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 1rem 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
 }
 
-.minesweeper select {
-    padding: 5px 10px;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
+.ms-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #cbd5e1;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-}
-  
-.cell {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.2s;
-    background-color: #7f8c8d;
-    color: #ecf0f1;
-    border-radius: 5px;
-}
-  
-.cell.open {
-    background-color: #bdc3c7;
-    cursor: default;
-}
-  
-.cell.flag {
-    /* background-image: url("./israel-flag-png.png"); */
-    background-image: url("../../../../public/israel-flag-png.png");
-    background-size: cover;
+.ms-select {
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  cursor: pointer;
 }
 
-
-.cell.open.mine {
-    background-color: #e74c3c;
-    color: #000;
+.ms-btn {
+  padding: 0.45rem 1.2rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.1s ease;
 }
 
-.cell img {
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
+.ms-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
 }
 
-/* Add hover effect for cells */
-.cell:not(.open):hover {
-    background-color: #95a5a6;
+.ms-board {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.9);
 }
 
-/* Custom styles for the mine image */
-#mineCss {
-    width: 90%;
-    height: 90%;
+.ms-row {
+  display: flex;
 }
 
-.cell.open:not(.mine) {
-    color: #2c3e50;
-    font-size: 22px;
-    font-weight: bold;
+.ms-cell.flag {
+  background-color: #020617;
+  background-image: url("/public/israel-flag-png.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
 }
 
-/* Styles for the Start Over button */
-button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+.ms-mine-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
-button:hover {
-    background-color: #45a049; /* Darker green */
+.ms-number[data-number="1"] { color: #38bdf8; }
+.ms-number[data-number="2"] { color: #34d399; }
+.ms-number[data-number="3"] { color: #f87171; }
+.ms-number[data-number="4"] { color: #a78bfa; }
+.ms-number[data-number="5"] { color: #fbbf24; } 
+.ms-number[data-number="6"] { color: #14b8a6; }
+.ms-number[data-number="7"] { color: #e11d48; }   
+.ms-number[data-number="8"] { color: #64748b; }  
+
+.ms-cell {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.4rem;
+  margin: 2px;
+  background: radial-gradient(circle at top, #020617, #0f172a);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.minesweeper.easy {
-    margin-top: 20px;
+.ms-cell:hover {
+  /* background: radial-gradient(circle at top, #020617, #1e293b); */
+  box-shadow: 0 0 8px rgba(15, 23, 42, 0.8);
 }
 
-.minesweeper.hard {
-    margin-top: 60px;
+.ms-cell.open {
+  background: #2c3f67;
+  border-color: rgba(148, 163, 184, 0.35);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+  cursor: default;
 }
 
-.minesweeper.very-hard {
-    margin-top: 70px;
+.ms-cell.open:hover {
+  background: #111827;
+  transform: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width: 768px) {
-    .minesweeper {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .cell {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .minesweeper label {
-        font-size: 16px;
-    }
-
-    .minesweeper select {
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-    .minesweeper.easy {
-        margin-top: 0px;
-    }
-    
-    .minesweeper.hard {
-        margin-top: 0px;
-    }
-    
-    .minesweeper.very-hard {
-        margin-top: 0px;
-    }
+.ms-cell.mine {
+  background: #7f1d1d;
+  border-color: #b91c1c;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.75);
 }
