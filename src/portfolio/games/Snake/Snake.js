@@ -48,10 +48,58 @@ const Snake = () => {
     const [foodsEaten, setFoodsEaten] = useState(0);
     const gameLoop = useRef(null);
     const directionQueue = useRef([]);
+    const [bestScore, setBestScore] = useState(0);
+
+    // ----------------------------
+    const fetchBestScore = async () => {
+    try {
+        const res = await fetch('/api/snake/best-score');
+        if (!res.ok) {
+            console.log("!res.ok");
+            return;
+        }
+        const data = await res.json();
+        if (typeof data.bestScore === 'number') {
+            setBestScore(data.bestScore);
+        }
+    } catch (err) {
+        console.error('Failed to fetch best score', err);
+    }
+    };
+
+    const submitScore = async (score) => {
+        try {
+            const res = await fetch('/api/snake/submit-score', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ score }),
+            });
+            if (!res.ok) return;
+            const data = await res.json();
+            if (typeof data.bestScore === 'number') {
+                setBestScore(data.bestScore);
+            }
+        } catch (err) {
+            console.error('Failed to submit score', err);
+        }
+    };
+
+    useEffect(() => {
+        fetchBestScore();
+    }, []);
+
+    useEffect(() => {
+        if (gameOver) {
+            submitScore(foodsEaten);
+        }
+    }, [gameOver, foodsEaten]);
+
+
 
     useEffect(() => {
         const handleKeyDown = (e) => {
             let newDirection = direction;
+            e.preventDefault();
             switch (e.key) {
                 case 'ArrowUp':
                     if (direction !== Direction.DOWN) newDirection = Direction.UP;
@@ -235,7 +283,6 @@ const Snake = () => {
                     <div
                         key={`${row}-${col}`}
                         className={`cell ${value === 1 ? 'snake' : ''} ${value === 2 ? 'food' : ''}`}
-                        style={{ width: CELL_SIZE, height: CELL_SIZE }}
                     ></div>
                 );
             }
@@ -255,18 +302,37 @@ const Snake = () => {
 
     return (
         <div className="snake-game">
-            <div className="grid" style={{ gridTemplateColumns: `repeat(${COLS}, ${CELL_SIZE}px)` }}>
-                {renderGrid()}
-            </div>
-    
-            {gameOver && (
-                <div className="overlay">
-                    <h1>Game Over!</h1>
-                    <button onClick={restartGame}>Restart</button>
+            <div className="snake-card">
+                <div className="snake-header">
+                    <h2>Snake</h2>
+                    <p>Use arrow keys or swipe to play</p>
                 </div>
-            )}
+
+                <div
+                    className="grid"
+                    style={{ '--rows': ROWS, '--cols': COLS }}
+                >
+                    {renderGrid()}
+                </div>
+
+                {/* <div className="snake-footer">
+                    <span className="snake-score">Score: {foodsEaten}</span>
+                </div> */}
+                <div className="snake-footer">
+                    <span className="snake-score">Score: {foodsEaten}</span>
+                    <span className="snake-best">Best: {bestScore}</span>
+                </div>
+
+                {gameOver && (
+                    <div className="overlay">
+                        <h1>Game Over</h1>
+                        <button onClick={restartGame}>Restart</button>
+                    </div>
+                )}
+            </div>
         </div>
     );
+
 };
 
 export default Snake;
