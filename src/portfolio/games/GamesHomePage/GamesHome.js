@@ -1,62 +1,52 @@
-// GamesHome.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './GameHome.css';
 
 function GamesHome() {
+  const { t } = useTranslation();
+
   const games = [
     {
       id: 'wizardarena',
-      title: 'Wizard Arena 3D',
+      title: t('GamesHome.gamesHomeCardWizardTitle'),
       path: '/WizardArena3D',
-      description:
-        'Unity 3D prototype: contains known bugs, built as a learning project for AI, enemies and combat systems.',
-      tags: ['Unity', 'C#', 'WebGL', '3D Game Development'],
+      description: t('GamesHome.gamesHomeCardWizardDescription'),
+      tags: [
+        t('GamesHome.gamesHomeTagUnity'),
+        t('GamesHome.gamesHomeTagCSharp'),
+        t('GamesHome.gamesHomeTagWebGL'),
+        t('GamesHome.gamesHomeTag3DGameDev'),
+      ],
     },
     {
       id: 'minesweeper',
-      title: 'Minesweeper',
+      title: t('GamesHome.gamesHomeCardMinesweeperTitle'),
       path: '/Minesweeper',
-      description:
-        'A classic logic-based grid game focused on deduction and careful planning.',
-      tags: ['React', 'State management', 'Game logic'],
+      description: t('GamesHome.gamesHomeCardMinesweeperDescription'),
+      tags: [
+        t('GamesHome.gamesHomeTagReact'),
+        t('GamesHome.gamesHomeTagStateManagement'),
+        t('GamesHome.gamesHomeTagGameLogic'),
+      ],
     },
     {
       id: 'snake',
-      title: 'Snake',
+      title: t('GamesHome.gamesHomeCardSnakeTitle'),
       path: '/Snake',
-      description:
-        'Real-time snake movement, collision detection and increasing difficulty over time.',
-      tags: ['Canvas-style movement', 'Collision detection'],
-    },
-    {
-      id: 'backgammon',
-      title: 'Backgammon',
-      path: '/Backgammon',
-      description:
-        'Implementation of the traditional board game with turn-based logic and dice rolls.',
-      tags: ['React', 'Game rules', 'UI interactions'],
-    },
-    {
-      id: 'clicker',
-      title: 'Clicker Game',
-      path: '/ClickerGame',
-      description:
-        'A simple incremental game used as a sandbox for state updates and UI feedback loops.',
-      tags: ['React', 'Incremental logic'],
+      description: t('GamesHome.gamesHomeCardSnakeDescription'),
+      tags: [
+        t('GamesHome.gamesHomeTagCanvasMovement'),
+        t('GamesHome.gamesHomeTagCollisionDetection'),
+      ],
     },
   ];
 
   return (
     <div className="games-page">
       <section className="games-header">
-        <h1 className="games-title">Games Playground</h1>
-        <p className="games-subtitle">
-          A small collection of side games built as experiments in UI,
-          state management and game mechanics. These are not production
-          systems, but they demonstrate curiosity and hands-on practice.
-        </p>
+        <h1 className="games-title">{t('GamesHome.gamesHomeTitle')}</h1>
+        <p className="games-subtitle">{t('GamesHome.gamesHomeSubtitle')}</p>
       </section>
 
       <section className="games-grid">
@@ -64,23 +54,26 @@ function GamesHome() {
           <article key={game.id} className="game-card">
             <div className="game-card-header">
               <h2 className="game-card-title">{game.title}</h2>
-              <span className="game-card-pill">Personal sandbox</span>
+              <span className="game-card-pill">
+                {t('GamesHome.gamesHomeCardPersonalSandbox')}
+              </span>
             </div>
+
             <p className="game-card-description">{game.description}</p>
 
             {game.tags && (
               <div className="game-card-tags">
-                {game.tags.map((tag) => (
-                  <span key={tag} className="game-card-tag">
+                {game.tags.map((tag, index) => (
+                  <span key={index} className="game-card-tag">
                     {tag}
                   </span>
-                ))}  
+                ))}
               </div>
             )}
 
             <div className="game-card-actions">
               <Link to={game.path} className="game-card-button">
-                Open game
+                {t('GamesHome.gamesHomeCardOpenGame')}
               </Link>
             </div>
           </article>

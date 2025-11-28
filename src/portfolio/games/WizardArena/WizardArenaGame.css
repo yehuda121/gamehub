@@ -1,39 +1,3 @@
-/* .wizard-game-container {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  color: #000000;
-}
-
-.wizard-game-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.wizard-game-frame-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #1f2937;
-}
-
-.wizard-game-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.wizard-game-note {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  text-align: center;
-  opacity: 0.8;
-} */
 /* Container Page */
 .wizardarena-page {
   min-height: calc(100vh - 80px);

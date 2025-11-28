@@ -57,12 +57,43 @@
         "contactLinkedinLabel": "לינקדאין:",
         "contactGithubLabel": "גיטאב:"
     },
+
     "navbar": {
-    "projects": "פרויקטים",
-    "tools": "כלים",
-    "games": "משחקים",
-    "calculators": "מחשבונים",
-    "contact": "יצירת קשר"
+        "projects": "פרויקטים",
+        "tools": "כלים",
+        "games": "משחקים",
+        "calculators": "מחשבונים",
+        "contact": "יצירת קשר"
+    },
+
+    "GamesHome": {
+        "gamesHomeTitle": "מגרש המשחקים",
+        "gamesHomeSubtitle": "אוסף קטן של משחקי צד שנבנו כניסויים ב־UI, בניהול מצבים ובמכניקות משחק. אלו לא מערכות.production, אלא הדגמה של סקרנות ותרגול מעשי.",
+
+        "gamesHomeCardWizardTitle": "Wizard Arena 3D",
+        "gamesHomeCardWizardDescription": "פרוטוטייפ Unity 3D: כולל באגים ידועים, נבנה כפרויקט למידה עבור AI, אויבים ומערכות לחימה.",
+
+        "gamesHomeCardMinesweeperTitle": "שולה המוקשים",
+        "gamesHomeCardMinesweeperDescription": "משחק לוגיקה קלאסי המבוסס על הסקה ותכנון זהיר.",
+
+        "gamesHomeCardSnakeTitle": "נחש",
+        "gamesHomeCardSnakeDescription": "תנועה בזמן אמת, זיהוי התנגשות ורמת קושי שהולכת וגדלה.",
+
+        "gamesHomeCardPersonalSandbox": "סביבת ניסוי אישית",
+        "gamesHomeCardOpenGame": "פתח משחק",
+
+        "gamesHomeTagUnity": "Unity",
+        "gamesHomeTagCSharp": "C#",
+        "gamesHomeTagWebGL": "WebGL",
+        "gamesHomeTag3DGameDev": "פיתוח משחקי 3D",
+
+        "gamesHomeTagReact": "React",
+        "gamesHomeTagStateManagement": "ניהול מצבים",
+        "gamesHomeTagGameLogic": "לוגיקת משחק",
+
+        "gamesHomeTagCanvasMovement": "תנועת Canvas",
+        "gamesHomeTagCollisionDetection": "זיהוי התנגשות"
     }
+
 
 }
