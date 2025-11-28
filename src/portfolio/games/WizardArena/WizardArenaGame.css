@@ -1,0 +1,88 @@
+/* .wizard-game-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.wizard-game-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.wizard-game-frame-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1f2937;
+}
+
+.wizard-game-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.wizard-game-note {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  text-align: center;
+  opacity: 0.8;
+} */
+/* Container Page */
+.wizardarena-page {
+  min-height: calc(100vh - 80px);
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e2e8f0;
+  background: radial-gradient(circle at top, #0b1120, #020617 40%);
+}
+
+/* Header */
+.wizardarena-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.wizardarena-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.wizardarena-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* Frame Wrapper */
+.wizardarena-frame-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.wizardarena-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

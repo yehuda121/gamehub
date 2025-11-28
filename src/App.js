@@ -13,6 +13,8 @@ import SimpleCalculator from './portfolio/Calculators/SimpleCalculator/SimpleCal
 // import Navbar from './portfolio/components/Navbar/Navbar';
 import Navbar from './portfolio/components/Navbar/Navbar';
 import ClickerGame from './portfolio/games/ClickerGame/ClickerGame';
+import WizardArenaGame from './portfolio/games/WizardArena/WizardArenaGame';
+
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
         <Route path="/ScientificCalculator" element={<ScientificCalculator/>} />
         <Route path="/CalculatorsHome" element={<CalculatorsHome />} />
         <Route path="/ClickerGame" element={<ClickerGame />} />
+        <Route path="/WizardArena3D" element={<WizardArenaGame />} />
         {/* <Route path="/GraphicCalculator" element={<GraphicCalculator/>} /> */}
       </Routes>
     </BrowserRouter>

@@ -7,6 +7,14 @@ import './GameHome.css';
 function GamesHome() {
   const games = [
     {
+      id: 'wizardarena',
+      title: 'Wizard Arena 3D',
+      path: '/WizardArena3D',
+      description:
+        'Unity 3D prototype: contains known bugs, built as a learning project for AI, enemies and combat systems.',
+      tags: ['Unity', 'C#', 'WebGL', '3D Game Development'],
+    },
+    {
       id: 'minesweeper',
       title: 'Minesweeper',
       path: '/Minesweeper',
@@ -15,20 +23,20 @@ function GamesHome() {
       tags: ['React', 'State management', 'Game logic'],
     },
     {
-      id: 'backgammon',
-      title: 'Backgammon',
-      path: '/Backgammon',
-      description:
-        'Implementation of the traditional board game with turn-based logic and dice rolls.',
-      tags: ['React', 'Game rules', 'UI interactions'],
-    },
-    {
       id: 'snake',
       title: 'Snake',
       path: '/Snake',
       description:
         'Real-time snake movement, collision detection and increasing difficulty over time.',
       tags: ['Canvas-style movement', 'Collision detection'],
+    },
+    {
+      id: 'backgammon',
+      title: 'Backgammon',
+      path: '/Backgammon',
+      description:
+        'Implementation of the traditional board game with turn-based logic and dice rolls.',
+      tags: ['React', 'Game rules', 'UI interactions'],
     },
     {
       id: 'clicker',
@@ -66,7 +74,7 @@ function GamesHome() {
                   <span key={tag} className="game-card-tag">
                     {tag}
                   </span>
-                ))}
+                ))}  
               </div>
             )}
 
