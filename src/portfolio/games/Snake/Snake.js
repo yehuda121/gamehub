@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Snake.css';
+import { useTranslation } from 'react-i18next';
 
 const ROWS = 20;
 const COLS = 20;
@@ -49,6 +50,7 @@ const Snake = () => {
     const gameLoop = useRef(null);
     const directionQueue = useRef([]);
     const [bestScore, setBestScore] = useState(0);
+    const { t } = useTranslation();
 
     // ----------------------------
     const fetchBestScore = async () => {
@@ -301,11 +303,11 @@ const Snake = () => {
     };
 
     return (
-        <div className="snake-game">
+        <div className="snake-game" dir='ltr'>
             <div className="snake-card">
                 <div className="snake-header">
-                    <h2>Snake</h2>
-                    <p>Use arrow keys or swipe to play</p>
+                    <h2>{t('snake.title')}</h2>
+                    <p>{t('snake.subtitle')}</p>
                 </div>
 
                 <div
@@ -315,18 +317,15 @@ const Snake = () => {
                     {renderGrid()}
                 </div>
 
-                {/* <div className="snake-footer">
-                    <span className="snake-score">Score: {foodsEaten}</span>
-                </div> */}
                 <div className="snake-footer">
-                    <span className="snake-score">Score: {foodsEaten}</span>
-                    <span className="snake-best">Best: {bestScore}</span>
+                    <span className="snake-score">{t('snake.scoreLabel')}: {foodsEaten}</span>
+                    <span className="snake-best">{t('snake.bestLabel')}: {bestScore}</span>
                 </div>
 
                 {gameOver && (
                     <div className="overlay">
-                        <h1>Game Over</h1>
-                        <button onClick={restartGame}>Restart</button>
+                        <h1>{t('snake.gameOverTitle')}</h1>
+                        <button onClick={restartGame}>{t('snake.restartButton')}</button>
                     </div>
                 )}
             </div>

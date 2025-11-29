@@ -93,7 +93,27 @@
 
         "gamesHomeTagCanvasMovement": "תנועת Canvas",
         "gamesHomeTagCollisionDetection": "זיהוי התנגשות"
-    }
+    },
 
+    "snake": {
+        "title": "נחש",
+        "subtitle": "השתמש בחיצים או בהחלקה כדי לשחק",
+        "scoreLabel": "ניקוד",
+        "bestLabel": "שיא",
+        "gameOverTitle": "המשחק הסתיים",
+        "restartButton": "התחל מחדש"
+    },
+
+    "minesweeper": {
+        "title": "שולה המוקשים",
+        "difficultyLabel": "רמת קושי",
+        "difficultyEasy": "קל",
+        "difficultyMedume": "בינוני",
+        "difficultyHard": "קשה",
+        "buttonStartOver": "התחל משחק חדש",
+        "winMessage": "כל הכבוד! ניצחת במשחק!",
+        "loseMessage": "המשחק הסתיים! לחצת על מוקש.",
+        "mineAlt": "מוקש"
+    }
 
 }

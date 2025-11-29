@@ -1,7 +1,7 @@
-
 // export default Minesweeper;
 import React, { useState, useEffect } from "react";
 import "./Minesweeper.css";
+import { useTranslation } from "react-i18next";
 
 const Minesweeper = () => {
     // State variables
@@ -10,7 +10,8 @@ const Minesweeper = () => {
     const [board, setBoard] = useState([]);
     const [gameOver, setGameOver] = useState(false);
     const [gameWon, setGameWon] = useState(false);
-    const [difficulty, setDifficulty] = useState("easy"); // State for difficulty
+    const [difficulty, setDifficulty] = useState("easy"); 
+    const { t } = useTranslation();
     // Images
     const backgroundImage = process.env.PUBLIC_URL + "/background-games.avif";
     const flagImage = process.env.PUBLIC_URL + "/israel-flag-png.png";
@@ -220,12 +221,12 @@ const Minesweeper = () => {
   return (
     <div className="ms-page">
       <div className="ms-header">
-        <h1 className="ms-title">Minesweeper</h1>
+        <h1 className="ms-title">{t("minesweeper.title")}</h1>
       </div>
 
       <div className="ms-panel">
         <label className="ms-label" htmlFor="difficulty">
-          Difficulty
+          {t("minesweeper.difficultyLabel")}
         </label>
 
         <select
@@ -234,13 +235,13 @@ const Minesweeper = () => {
           onChange={handleDifficultyChange}
           className="ms-select"
         >
-          <option value="easy">Easy</option>
-          <option value="hard">Hard</option>
-          <option value="very-hard">Very Hard</option>
+          <option value="easy">{t("minesweeper.difficultyEasy")}</option>
+          <option value="hard">{t("minesweeper.difficultyMedume")}</option>
+          <option value="very-hard">{t("minesweeper.difficultyHard")}</option>
         </select>
 
         <button className="ms-btn" onClick={initializeBoard}>
-          Start Over
+          {t("minesweeper.buttonStartOver")}
         </button>
       </div>
 

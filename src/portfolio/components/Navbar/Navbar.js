@@ -52,9 +52,7 @@ function Navbar() {
 
           {/* --------------------------------------------------- */}
 
-          <div
-            className="navbar-dropdown"
-          >
+          {/* <div className="navbar-dropdown">
             <button
               type="button"
               className="navbar-link navbar-dropdown-toggle"
@@ -65,8 +63,7 @@ function Navbar() {
                 className={`navbar-dropdown-arrow ${
                   toolsOpen ? 'open' : ''
                 }`}
-              >
-                ▾
+              > ▾
               </span>
             </button>
 
@@ -88,11 +85,18 @@ function Navbar() {
                 </Link>
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* -------------------------------------------------------------- */}
 
           <nav className="navbar-links">
+            <Link
+              to="/GamesHome"
+              className="navbar-link"
+            >
+              {t('navbar.games')}
+            </Link>
+
             <button
               type="button"
               className="navbar-link"

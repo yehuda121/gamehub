@@ -69,30 +69,45 @@
     "GamesHome": {
         "gamesHomeTitle": "Games Playground",
         "gamesHomeSubtitle": "A small collection of side games built as experiments in UI, state management and game mechanics. These are not production systems, but they demonstrate curiosity and hands-on practice.",
-
         "gamesHomeCardWizardTitle": "Wizard Arena 3D",
         "gamesHomeCardWizardDescription": "Unity 3D prototype: contains known bugs, built as a learning project for AI, enemies and combat systems.",
-
         "gamesHomeCardMinesweeperTitle": "Minesweeper",
         "gamesHomeCardMinesweeperDescription": "A classic logic-based grid game focused on deduction and careful planning.",
-
         "gamesHomeCardSnakeTitle": "Snake",
         "gamesHomeCardSnakeDescription": "Real-time snake movement, collision detection and increasing difficulty over time.",
-
         "gamesHomeCardPersonalSandbox": "Personal sandbox",
         "gamesHomeCardOpenGame": "Open game",
-
         "gamesHomeTagUnity": "Unity",
         "gamesHomeTagCSharp": "C#",
         "gamesHomeTagWebGL": "WebGL",
         "gamesHomeTag3DGameDev": "3D Game Development",
-
         "gamesHomeTagReact": "React",
         "gamesHomeTagStateManagement": "State management",
         "gamesHomeTagGameLogic": "Game logic",
-
         "gamesHomeTagCanvasMovement": "Canvas-style movement",
         "gamesHomeTagCollisionDetection": "Collision detection"
+    },
+    
+    "snake": {
+        "title": "Snake",
+        "subtitle": "Use arrow keys or swipe to play",
+        "scoreLabel": "Score",
+        "bestLabel": "Best",
+        "gameOverTitle": "Game Over",
+        "restartButton": "Restart"
+    },
+    
+    "minesweeper": {
+        "title": "Minesweeper",
+        "difficultyLabel": "Difficulty",
+        "difficultyEasy": "Easy",
+        "difficultyMedume": "Medume",
+        "difficultyHard": "Hard",
+        "buttonStartOver": "Start Over",
+        "winMessage": "Congratulations! You won the game!",
+        "loseMessage": "Game Over! You clicked on a mine.",
+        "mineAlt": "mine"
     }
+    
 
 }
