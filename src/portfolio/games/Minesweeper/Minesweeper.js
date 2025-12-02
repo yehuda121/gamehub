@@ -222,6 +222,7 @@ const Minesweeper = () => {
     <div className="ms-page">
       <div className="ms-header">
         <h1 className="ms-title">{t("minesweeper.title")}</h1>
+        <p className="ms-instructions">{t("minesweeper.instructions")}</p>
       </div>
 
       <div className="ms-panel">

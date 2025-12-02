@@ -11,7 +11,7 @@
         "projectsTitle": "Featured Projects",
         "projectsSubtitle": "Selected projects that represent my work in full-stack development, cloud, AI, systems programming and game development.",
 
-        "projectMesayaTitle": "Mesayaatech – Reservist Career Support Platform",
+        "projectMesayaTitle": "Mesayaatech - Reservist Career Support Platform",
         "projectMesayaDesc": "A full-stack platform that helps Israeli reservists connect with mentors, discover job opportunities and track their progress. The system supports multiple user roles, secure authentication and a bilingual UI.",
         "projectMesayaTech": "Tech Stack: Node.js, Next.js, AWS (Cognito, DynamoDB, S3, SES, Bedrock), Docker",
         "projectMesayaLink": "View Presentation",
@@ -36,7 +36,7 @@
         "projectDiskTech": "Tech Stack: C++, File Handling, System Calls",
         "projectDiskLink": "View on GitHub",
 
-        "projectExtTitle": "Chrome Extension – Search Results Hider",
+        "projectExtTitle": "Chrome Extension - Search Results Hider",
         "projectExtDesc": "Chrome extension that injects UI controls into Google Search results, enabling users to hide or filter specific results using safe DOM manipulation and dynamic node detection.",
         "projectExtTech": "Tech Stack: JavaScript, DOM APIs, Manifest V3",
         "projectExtLink": "View on GitHub",
@@ -90,7 +90,7 @@
     
     "snake": {
         "title": "Snake",
-        "subtitle": "Use arrow keys or swipe to play",
+        "subtitle": "Use arrow keys or swipe on a smartphone to play",
         "scoreLabel": "Score",
         "bestLabel": "Best",
         "gameOverTitle": "Game Over",
@@ -99,6 +99,7 @@
     
     "minesweeper": {
         "title": "Minesweeper",
+        "instructions": "How to play: left-click to open a cell and right-click to place or remove a flag or on a smartphone, tap briefly to open a cell and long-press to place or remove a flag.",
         "difficultyLabel": "Difficulty",
         "difficultyEasy": "Easy",
         "difficultyMedume": "Medume",
@@ -107,6 +108,13 @@
         "winMessage": "Congratulations! You won the game!",
         "loseMessage": "Game Over! You clicked on a mine.",
         "mineAlt": "mine"
+    },
+
+    "wizardArena": {
+        "title": "Wizard Arena 3D",
+        "subtitle": "A 3D action prototype built in Unity. The WebGL version is part of a learning project.",
+        "instructions": "How to play: Control the game with the arrow keys (left, right, forward), use the down arrow for aiming mode, press Space to cast a spell, and press S to activate a defensive shield.",
+        "keyboardWarning": "This game requires a physical keyboard (touch-only devices like phones or tablets are not supported)."
     }
     
 

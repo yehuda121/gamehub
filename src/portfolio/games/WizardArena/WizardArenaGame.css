@@ -21,6 +21,7 @@
   font-weight: 700;
   background: linear-gradient(90deg, #38bdf8, #0ea5e9);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-bottom: 0.5rem;
 }
@@ -28,6 +29,19 @@
 .wizardarena-subtitle {
   font-size: 1.1rem;
   opacity: 0.8;
+}
+
+.wizardarena-instructions {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.wizardarena-keyboard-warning {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f97373; 
 }
 
 /* Frame Wrapper */

@@ -319,7 +319,7 @@ const Snake = () => {
 
                 <div className="snake-footer">
                     <span className="snake-score">{t('snake.scoreLabel')}: {foodsEaten}</span>
-                    <span className="snake-best">{t('snake.bestLabel')}: {bestScore}</span>
+                    {/* <span className="snake-best">{t('snake.bestLabel')}: {bestScore}</span> */}
                 </div>
 
                 {gameOver && (

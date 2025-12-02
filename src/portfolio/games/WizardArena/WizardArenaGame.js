@@ -1,14 +1,17 @@
 import React from "react";
 import "./WizardArenaGame.css";
+import { useTranslation } from "react-i18next";
 
 function WizardArenaGame() {
+  const { t } = useTranslation();
+
   return (
     <div className="wizardarena-page">
       <div className="wizardarena-header">
-        <h1 className="wizardarena-title">Wizard Arena 3D</h1>
-        <p className="wizardarena-subtitle">
-          A 3D action prototype built in Unity. This WebGL version may take a moment to load.
-        </p>
+        <h1 className="wizardarena-title">{t("wizardArena.title")}</h1>
+        <p className="wizardarena-subtitle">{t("wizardArena.subtitle")}</p>
+        <p className="wizardarena-instructions">{t("wizardArena.instructions")}</p>
+        <p className="wizardarena-keyboard-warning">{t("wizardArena.keyboardWarning")}</p>
       </div>
 
       <div className="wizardarena-frame-wrapper">
