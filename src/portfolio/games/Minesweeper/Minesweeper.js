@@ -1,141 +1,37 @@
-// export default Minesweeper;
+// Minesweeper.jsx / Minesweeper.js
 import React, { useState, useEffect } from "react";
 import "./Minesweeper.css";
 import { useTranslation } from "react-i18next";
+import Notification from "../../components/Notifications/Notification";
+import { createBoard, floodReveal, checkWin } from "./minesweeperLogic";
 
 const Minesweeper = () => {
-    // State variables
-    const [boardSize, setBoardSize] = useState(10);
-    const [numMines, setNumMines] = useState(10);
-    const [board, setBoard] = useState([]);
-    const [gameOver, setGameOver] = useState(false);
-    const [gameWon, setGameWon] = useState(false);
-    const [difficulty, setDifficulty] = useState("easy"); 
-    const { t } = useTranslation();
-    // Images
-    const backgroundImage = process.env.PUBLIC_URL + "/background-games.avif";
-    const flagImage = process.env.PUBLIC_URL + "/israel-flag-png.png";
-    const mineImage = process.env.PUBLIC_URL + "/mine.png";
+  // Game state
+  const [boardSize, setBoardSize] = useState(10);
+  const [numMines, setNumMines] = useState(13);
+  const [board, setBoard] = useState([]);
+  const [gameOver, setGameOver] = useState(false);
+  const [gameWon, setGameWon] = useState(false);
+  const [difficulty, setDifficulty] = useState("easy");
 
-    // Directions for neighbor traversal (8 neighbors)
-    const directions = [
-        [-1, -1],
-        [-1, 0],
-        [-1, 1],
-        [0, -1],
-        [0, 1],
-        [1, -1],
-        [1, 0],
-        [1, 1],
-    ];
+  const { t } = useTranslation();
 
-    // Initialize board when component mounts or when size/mines change
-    useEffect(() => {
-        initializeBoard();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [boardSize, numMines]);
+  // Initialize board when size or mine count changes
+  useEffect(() => {
+    initializeBoard();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [boardSize, numMines]);
 
-  // Function to create a fresh board with mines and adjacent counts
+  // Create a fresh board and reset game state
   const initializeBoard = () => {
-    const size = boardSize;
-    const mines = Math.min(numMines, size * size - 1); // safety guard
-
-    // Create empty board
-    const newBoard = Array.from({ length: size }, () =>
-      Array.from({ length: size }, () => ({
-        isMine: false,
-        isOpen: false,
-        isFlagged: false,
-        adjacentMines: 0,
-      }))
-    );
-
-    // Place mines randomly
-    let minesPlaced = 0;
-    while (minesPlaced < mines) {
-      const x = Math.floor(Math.random() * size);
-      const y = Math.floor(Math.random() * size);
-      if (!newBoard[x][y].isMine) {
-        newBoard[x][y].isMine = true;
-        minesPlaced++;
-      }
-    }
-
-    // Compute adjacent mine counts
-    for (let x = 0; x < size; x++) {
-      for (let y = 0; y < size; y++) {
-        if (newBoard[x][y].isMine) continue;
-
-        let count = 0;
-        for (const [dx, dy] of directions) {
-          const nx = x + dx;
-          const ny = y + dy;
-          if (
-            nx >= 0 &&
-            nx < size &&
-            ny >= 0 &&
-            ny < size &&
-            newBoard[nx][ny].isMine
-          ) {
-            count++;
-          }
-        }
-
-        newBoard[x][y].adjacentMines = count;
-      }
-    }
-
+    const safeMines = Math.min(numMines, boardSize * boardSize - 1);
+    const newBoard = createBoard(boardSize, safeMines);
     setBoard(newBoard);
     setGameOver(false);
     setGameWon(false);
   };
 
-  // Function to check win condition:
-  // Player wins if every non-mine cell is open.
-  const checkWin = (currentBoard) => {
-    for (let row of currentBoard) {
-      for (let cell of row) {
-        if (!cell.isMine && !cell.isOpen) {
-          return false;
-        }
-      }
-    }
-    setGameWon(true);
-    alert("Congratulations! You won the game!");
-    return true;
-  };
-
-  // Function to reveal a cell and expand if there are 0 adjacent mines
-  const floodReveal = (startX, startY, currentBoard) => {
-    const size = currentBoard.length;
-    const stack = [[startX, startY]];
-
-    while (stack.length > 0) {
-      const [x, y] = stack.pop();
-
-      if (
-        x < 0 ||
-        x >= size ||
-        y < 0 ||
-        y >= size ||
-        currentBoard[x][y].isOpen ||
-        currentBoard[x][y].isFlagged
-      ) {
-        continue;
-      }
-
-      currentBoard[x][y].isOpen = true;
-
-      // If no adjacent mines, continue to neighbors
-      if (currentBoard[x][y].adjacentMines === 0 && !currentBoard[x][y].isMine) {
-        for (const [dx, dy] of directions) {
-          stack.push([x + dx, y + dy]);
-        }
-      }
-    }
-  };
-
-  // Function to handle left-click on a cell
+  // Handle left-click: open a cell
   const handleClick = (x, y) => {
     if (gameOver || gameWon || !board.length) return;
 
@@ -154,7 +50,6 @@ const Minesweeper = () => {
     if (cell.isMine) {
       setGameOver(true);
 
-      // Reveal all mines
       for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
           if (currentBoard[i][j].isMine) {
@@ -164,17 +59,20 @@ const Minesweeper = () => {
       }
 
       setBoard(currentBoard);
-      alert("Game Over! You clicked on a mine.");
       return;
     }
 
-    // If not a mine -> reveal this cell and flood if needed
-    floodReveal(x, y, currentBoard);
+    // Reveal safe area
+    floodReveal(currentBoard, x, y);
     setBoard(currentBoard);
-    checkWin(currentBoard);
+
+    // Check win condition
+    if (checkWin(currentBoard)) {
+      setGameWon(true);
+    }
   };
 
-  // Function to handle right-click (flagging)
+  // Handle right-click: toggle flag
   const handleRightClick = (event, x, y) => {
     event.preventDefault();
     if (gameOver || gameWon || !board.length) return;
@@ -192,10 +90,9 @@ const Minesweeper = () => {
 
     cell.isFlagged = !cell.isFlagged;
     setBoard(currentBoard);
-    // We do not require flags for win condition, so we don't call checkWin here.
   };
 
-  // Function to handle difficulty level change
+  // Handle difficulty selection changes
   const handleDifficultyChange = (event) => {
     const selectedDifficulty = event.target.value;
     setDifficulty(selectedDifficulty);
@@ -217,6 +114,17 @@ const Minesweeper = () => {
         break;
     }
   };
+
+  // Count flags and remaining mines (can be negative by request)
+  const flagsPlaced = board.length ? board.reduce(
+    (acc, row) => acc + row.filter((cell) => cell.isFlagged).length, 0) : 0;
+  const minesRemaining = numMines - flagsPlaced;
+
+  // Notification content
+  const notificationType = gameWon ? "success" : gameOver ? "error" : null;
+  const notificationMessage = gameWon
+    ? t("minesweeper.winMessage") : gameOver
+    ? t("minesweeper.loseMessage") : "";
 
   return (
     <div className="ms-page">
@@ -244,7 +152,15 @@ const Minesweeper = () => {
         <button className="ms-btn" onClick={initializeBoard}>
           {t("minesweeper.buttonStartOver")}
         </button>
+
+        <div className="ms-mines-remaining">
+          {t("minesweeper.minesRemainingLabel")}: {minesRemaining}
+        </div>
       </div>
+
+      {notificationType && (
+        <Notification type={notificationType} message={notificationMessage} />
+      )}
 
       <div className="ms-board">
         {board.map((row, x) => (
@@ -266,7 +182,11 @@ const Minesweeper = () => {
                 ) : null}
 
                 {cell.isOpen && cell.isMine && (
-                  <img src="/mine.png" alt="mine" className="ms-mine-img" />
+                  <img
+                    src="/mine.png"
+                    alt={t("minesweeper.mineAlt")}
+                    className="ms-mine-img"
+                  />
                 )}
               </div>
             ))}

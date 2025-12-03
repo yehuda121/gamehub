@@ -114,7 +114,8 @@
         "buttonStartOver": "התחל משחק חדש",
         "winMessage": "כל הכבוד! ניצחת במשחק!",
         "loseMessage": "המשחק הסתיים! לחצת על מוקש.",
-        "mineAlt": "מוקש"
+        "mineAlt": "מוקש",
+        "minesRemainingLabel": "מוקשים"
     },
 
     "wizardArena": {

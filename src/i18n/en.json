@@ -107,7 +107,8 @@
         "buttonStartOver": "Start Over",
         "winMessage": "Congratulations! You won the game!",
         "loseMessage": "Game Over! You clicked on a mine.",
-        "mineAlt": "mine"
+        "mineAlt": "mine",
+        "minesRemainingLabel": "Mines"
     },
 
     "wizardArena": {
