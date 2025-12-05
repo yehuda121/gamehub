@@ -7,6 +7,9 @@
         "cvButton": "View CV (PDF)",
         "contactButton": "Contact",
         "linkedinButton": "LinkedIn Profile",
+        "whatchOnGithub": "View on GitHub",
+        "FrontendLink": "Frontend",
+        "BackendLink": "Backend",
 
         "projectsTitle": "Featured Projects",
         "projectsSubtitle": "Selected projects that represent my work in full-stack development, cloud, AI, systems programming and game development.",

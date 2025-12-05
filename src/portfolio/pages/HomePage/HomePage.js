@@ -87,13 +87,39 @@ function Homepage() {
             <p className="homepage-project-tech">
               {t('homepage.projectMesayaTech')}
             </p>
+
             <div className="homepage-project-links">
+              {/* Presentation */}
               <a
                 href="https://docs.google.com/presentation/d/e/2PACX-1vSyZ1gSFUWk0Pk3quRsl8t14joQz48WpaQ_MRjPLk0N-8JKU_w2JB8U4W1EXjUYLw/pub?start=true&loop=false&delayms=3000"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {t('homepage.projectMesayaLink')}
+              </a>
+
+              {/* Separator */}
+              <span> | </span>
+
+              {/* Watch on GitHub */}
+              <span>{t('homepage.whatchOnGithub')}:</span>
+
+              {/* Frontend */}
+              <a
+                href="https://github.com/yehuda121/mesayaatech-frontend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('homepage.FrontendLink')}
+              </a>
+
+              {/* Backend */}
+              <a
+                href="https://github.com/yehuda121/mesayaatech-backend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('homepage.BackendLink')}
               </a>
             </div>
           </div>
@@ -129,6 +155,14 @@ function Homepage() {
               >
                 {t('homepage.projectWarehouseLink')}
               </a>
+              <span> | </span>
+              <a
+                href="https://github.com/yehuda121/quickshop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('homepage.whatchOnGithub')}
+              </a>
             </div>
           </div>
 
@@ -147,6 +181,14 @@ function Homepage() {
                     rel="noopener noreferrer"
                   >
                     {t('homepage.projectWizardLink')}
+                  </a>
+                  <span> | </span>
+                  <a
+                    href="https://github.com/yehuda121/wizard-arena-3d-unity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('homepage.whatchOnGithub')}
                   </a>
                 </div>
               </div>
@@ -202,7 +244,7 @@ function Homepage() {
         </div>
 
         {/* Tools & Mini Apps */}
-        {/* <div className="homepage-card">
+        <div className="homepage-card">
           <h2 className="homepage-card-title">{t('homepage.toolsTitle')}</h2>
           <p className="homepage-card-text">
             {t('homepage.toolsText')}
@@ -215,18 +257,18 @@ function Homepage() {
             >
               {t('homepage.toolsGames')}
             </Link>
-            <Link
+            {/* <Link
               to="/CalculatorsHome"
               className="homepage-tools-btn homepage-tools-btn-secondary"
             >
               {t('homepage.toolsCalculators')}
-            </Link>
+            </Link> */}
           </div>
 
           <p className="homepage-card-note">
             {t('homepage.toolsNote')}
           </p>
-        </div> */}
+        </div>
 
         {/* Contact */}
         <div className="homepage-card" id="contact-section">
@@ -270,7 +312,7 @@ function Homepage() {
         </div>
       </section>
 
-      {/* Social Icons (bottom) */}
+      {/* Social Icons */}
       <div className="social-media-container">
         <a
           href="https://www.linkedin.com/in/yehuda-shmulevitz/"
