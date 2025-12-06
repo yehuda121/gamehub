@@ -102,7 +102,7 @@ function Homepage() {
               <span> | </span>
 
               {/* Watch on GitHub */}
-              <span>{t('homepage.whatchOnGithub')}:</span>
+              <span>{t('homepage.viewOnGithub')}:</span>
 
               {/* Frontend */}
               <a
@@ -136,7 +136,7 @@ function Homepage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {t('homepage.projectHeartLink')}
+                {t('homepage.viewOnGithub')}
               </a>
             </div>
           </div>
@@ -161,7 +161,7 @@ function Homepage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {t('homepage.whatchOnGithub')}
+                {t('homepage.viewOnGithub')}
               </a>
             </div>
           </div>
@@ -188,7 +188,7 @@ function Homepage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('homepage.whatchOnGithub')}
+                    {t('homepage.viewOnGithub')}
                   </a>
                 </div>
               </div>
@@ -205,7 +205,7 @@ function Homepage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('homepage.projectDiskLink')}
+                    {t('homepage.viewOnGithub')}
                   </a>
                 </div>
               </div>
@@ -222,7 +222,15 @@ function Homepage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('homepage.projectExtLink')}
+                    {t('homepage.viewOnGithub')}
+                  </a>
+                  <span> | </span>
+                  <a
+                    href="https://chromewebstore.google.com/detail/search-results-hider/ceajphjdnekebeggfadieaoacnhjpebj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('homepage.projectExtChrome')}
                   </a>
                 </div>
               </div>

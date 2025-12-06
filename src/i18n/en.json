@@ -7,9 +7,10 @@
         "cvButton": "View CV (PDF)",
         "contactButton": "Contact",
         "linkedinButton": "LinkedIn Profile",
-        "whatchOnGithub": "View on GitHub",
+        "viewOnGithub": "View on GitHub",
         "FrontendLink": "Frontend",
         "BackendLink": "Backend",
+        "projectExtChrome": "View on Chrome Web Store",
 
         "projectsTitle": "Featured Projects",
         "projectsSubtitle": "Selected projects that represent my work in full-stack development, cloud, AI, systems programming and game development.",
@@ -22,7 +23,6 @@
         "projectHeartTitle": "Heart Attack Prediction (Machine Learning)",
         "projectHeartDesc": "Machine-learning pipeline that predicts heart-attack risk based on clinical features. Includes preprocessing, feature scaling, training and performance evaluation.",
         "projectHeartTech": "Tech Stack: Python, Scikit-learn, Pandas, NumPy, Matplotlib",
-        "projectHeartLink": "View on GitHub",
 
         "projectWarehouseTitle": "Warehouse Equipment Lending System",
         "projectWarehouseDesc": "Web application for managing equipment lending in a warehouse, with real-time data updates and a modern frontend. This project won 1st place at Azrieli College.",
@@ -37,12 +37,10 @@
         "projectDiskTitle": "Disk Simulator",
         "projectDiskDesc": "File system simulation that emulates file operations on a virtual disk, showcasing low-level programming, file handling and system calls.",
         "projectDiskTech": "Tech Stack: C++, File Handling, System Calls",
-        "projectDiskLink": "View on GitHub",
 
         "projectExtTitle": "Chrome Extension - Search Results Hider",
         "projectExtDesc": "Chrome extension that injects UI controls into Google Search results, enabling users to hide or filter specific results using safe DOM manipulation and dynamic node detection.",
         "projectExtTech": "Tech Stack: JavaScript, DOM APIs, Manifest V3",
-        "projectExtLink": "View on GitHub",
 
         "projectsShowMore": "Show more projects ▼",
         "projectsShowLess": "Show fewer projects ▲",

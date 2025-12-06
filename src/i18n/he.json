@@ -2,14 +2,15 @@
     "homepage": {
         "tag": "פורטפוליו רשמי",
         "name": "יהודה שמולביץ",
-        "role": "מהנדס תוכנה · מומחה ב-AI · מפתח פולסטאק",
-        "summary": "מהנדס תוכנה עם ניסיון מעשי בפיתוח פולסטאק, ארכיטקטורות ענן ופתרונות מבוססי AI. בניתי מערכות ברמת Production על גבי AWS, פלטפורמות web בזמן אמת ופרויקטים מורכבים ב-Unity, ++C  Python ,Linux, ולמידת מכונה. מחפש את ההזדמנות הבאה שלי בתחום פיתוח התוכנה.",
+        "role": "מהנדס תוכנה · מומחה ב־AI · מפתח פולסטאק",
+        "summary": "מהנדס תוכנה עם ניסיון מעשי בפיתוח פולסטאק, ארכיטקטורות ענן ופתרונות מבוססי AI. בניתי מערכות ברמת Production על גבי AWS, פלטפורמות web בזמן אמת ופרויקטים מורכבים ב־Unity, ++C  Python ,Linux, ולמידת מכונה. מחפש את ההזדמנות הבאה שלי בתחום פיתוח התוכנה.",
         "cvButton": "צפה בקורות חיים (PDF)",
         "contactButton": "צור קשר",
         "linkedinButton": "פרופיל LinkedIn",
-        "whatchOnGithub": "לצפייה ב-GitHub",
+        "viewOnGithub": "לצפייה ב־GitHub",
         "FrontendLink": "פרונטאנד",
         "BackendLink": "בקאנד",
+        "projectExtChrome": "צפייה ב־ Chrome Web Store",
 
         "projectsTitle": "פרויקטים נבחרים",
         "projectsSubtitle": "אוסף פרויקטים המייצגים את עבודתי בפיתוח פולסטאק, ענן, AI, תכנות מערכות ופיתוח משחקים.",
@@ -22,7 +23,6 @@
         "projectHeartTitle": "Heart Attack Prediction (למידת מכונה)",
         "projectHeartDesc": "מערכת למידת מכונה לחיזוי סיכון להתקף לב על בסיס נתונים קליניים, כולל עיבוד מקדים, נרמול תכונות, אימון ומדדי ביצועים.",
         "projectHeartTech": "סטאק טכנולוגי: Python, Scikit-learn, Pandas, NumPy, Matplotlib",
-        "projectHeartLink": "לצפייה ב-GitHub",
 
         "projectWarehouseTitle": "מערכת השאלת ציוד מחסן",
         "projectWarehouseDesc": "יישום ווב לניהול השאלת ציוד עם עדכונים בזמן אמת ופרונט מודרני. זוכה מקום ראשון במכללת עזריאלי.",
@@ -37,12 +37,10 @@
         "projectDiskTitle": "Disk Simulator",
         "projectDiskDesc": "סימולטור מערכת קבצים המדמה פעולות על דיסק וירטואלי, כולל תכנות מערכות, טיפול בקבצים וקריאות מערכת.",
         "projectDiskTech": "סטאק טכנולוגי: ++C, ניהול קבצים, קריאות מערכת",
-        "projectDiskLink": "לצפייה ב-GitHub",
 
         "projectExtTitle": "תוסף כרום - סינון תוצאות חיפוש",
         "projectExtDesc": "תוסף כרום המוסיף רכיבי UI לתוצאות חיפוש בגוגל ומאפשר הסתרה/סינון של תוצאות באמצעות מניפולציות DOM וגילוי דינמי של צמתים.",
         "projectExtTech": "סטאק טכנולוגי: JavaScript, DOM APIs, Manifest V3",
-        "projectExtLink": "לצפייה ב-GitHub",
 
         "projectsShowMore": "הצג עוד פרויקטים ▼",
         "projectsShowLess": "הצג פחות פרויקטים ▲",
