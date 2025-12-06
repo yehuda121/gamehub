@@ -288,8 +288,8 @@ function Homepage() {
           <ul className="homepage-contact-list">
             <li>
               <strong>{t('homepage.contactEmailLabel')}</strong>{' '}
-              <a href="mailto:yehudash1994@gmail.com">
-                yehudash1994@gmail.com
+              <a href="mailto:yehuda.shmulevitz@gmail.com">
+                yehuda.shmulevitz@gmail.com
               </a>
             </li>
             <li>
